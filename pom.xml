@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.12</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+	
+	
+    <groupId>mx.com.devops</groupId>
+    <artifactId>ms-api-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>ms-api-service</name>
+    <description>Demo Inicial</description>
+    <properties>
+        <java.version>11</java.version>
+        <!-- <spring-cloud.version>2021.0.2</spring-cloud.version> -->
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!-- <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-dependencies</artifactId>
+                    <version>${spring-cloud.version}</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+            </dependency> -->		
+            <dependency>
+                <groupId>dev.snowdrop</groupId>
+                <artifactId>snowdrop-dependencies</artifactId>
+                <version>2.5.12.Final-redhat-00001</version>
+                <type>pom</type>		    
+            </dependency>		
+            <dependency>
+                <groupId>io.dekorate</groupId>
+                <artifactId>openshift-spring-starter</artifactId>
+            </dependency>
+        </dependencies>		
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>redhat-ga</id>
+            <name>Red Hat GA Repository</name>
+            <url>https://maven.repository.redhat.com/ga/</url>
+        </repository>
+    </repositories>
+  
+    <pluginRepositories>
+        <pluginRepository>
+            <id>redhat-ga</id>
+            <name>Red Hat GA Repository</name>
+            <url>https://maven.repository.redhat.com/ga/</url>
+        </pluginRepository>
+    </pluginRepositories>
+  
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
